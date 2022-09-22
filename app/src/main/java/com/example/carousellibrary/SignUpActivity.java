@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
 
 public class SignUpActivity extends AppCompatActivity {
     private Button signupBtn;
@@ -23,5 +27,21 @@ public class SignUpActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void onRadioButtonClicked(View view) {
+
+        RadioGroup rg = (RadioGroup) findViewById(R.id.radioButton);
+        int radioButtonId = rg.getCheckedRadioButtonId();
+        System.out.println(radioButtonId);
+        RadioButton rb = (RadioButton) rg.findViewById(radioButtonId);
+        String text = (String) rb.getText();
+
+        EditText NID = (EditText) findViewById(R.id.signUpNID);
+        if(text.equals("Fur Mommy")) {
+            NID.setVisibility(View.VISIBLE);
+        } else {
+            NID.setVisibility(View.GONE);
+        }
     }
 }
