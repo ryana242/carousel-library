@@ -18,7 +18,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        loginBtn = findViewById(R.id.button);
+        loginBtn = findViewById(R.id.loginButton);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        signUp = findViewById(R.id.textView3);
+        signUp = findViewById(R.id.signUp);
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        forgotPass = findViewById(R.id.textView5);
+        forgotPass = findViewById(R.id.forgetPass);
         forgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
