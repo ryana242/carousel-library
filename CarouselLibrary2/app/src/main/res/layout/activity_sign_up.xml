@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sign_up_bg"
+    tools:context=".SignUpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/signUpTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:text="FUR BABIES"
+            android:textColor="#000"
+            android:textSize="40sp" />
+
+        <EditText
+            android:id="@+id/signUpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/signUpTitle"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/signUpName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:inputType="textPersonName"
+            android:layout_below="@+id/signUpEmail"
+            android:hint="Name"
+            android:textColor="#000" />
+
+
+        <EditText
+            android:id="@+id/signUpDob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:inputType="date"
+            android:layout_below="@+id/signUpName"
+            android:hint="Date of Birth (YYYY-MM-DD)"
+            android:textColor="#000" />
+        <!--    Need to add a field location (google map)-->
+
+        <EditText
+            android:id="@+id/signUpPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:inputType="phone"
+            android:hint="Contact Number"
+            android:layout_below="@+id/signUpDob" />
+
+        <EditText
+            android:id="@+id/signUpPw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:layout_below="@+id/signUpPhone" />
+
+        <EditText
+            android:id="@+id/signUpConfirmPw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:inputType="textPassword"
+            android:hint="Confirm Password"
+            android:layout_below="@+id/signUpPw" />
+
+        <EditText
+            android:id="@+id/signUpNID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:inputType="number"
+            android:hint="NID"
+            android:visibility="gone"
+            android:layout_below="@+id/radioButton" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_below="@+id/signUpConfirmPw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:id="@+id/radioButton">
+
+            <RadioButton
+                android:id="@+id/radioFurBaby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fur Baby"
+                android:onClick="onRadioButtonClicked"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <RadioButton
+                android:id="@+id/radioFurMommy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fur Mommy"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="onRadioButtonClicked" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="10dp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#77C3EC"
+            android:text="Sign Up"
+            android:layout_below="@+id/signUpNID" />
+    </RelativeLayout>
+</ScrollView>

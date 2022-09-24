@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/login_img"
+        android:id="@+id/loginImg"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="FUR BABIES"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#000"
+        android:textSize="34sp"
+        android:layout_below="@+id/loginImg"
+        />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:foregroundTint="#FFFFFF"
+        android:inputType="textEmailAddress"
+        android:shadowColor="#FFFFFF"
+        android:hint="Email"
+        android:textColor="#000"
+        android:layout_below="@+id/textView"
+       />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="40dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:textColor="#000"
+        android:layout_below="@+id/editTextTextEmailAddress"
+      />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:text="LOGIN"
+        android:backgroundTint="#77C3EC"
+        android:layout_below="@+id/editTextTextPassword"
+        />
+
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forgetPass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="Sign Up"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/forgetPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_marginHorizontal="40dp"
+        android:text="Forgot Password?"
+        android:fontFamily="sans-serif"
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:layout_below="@+id/loginButton"
+        />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Register as Fur Mommy"-->
+<!--        android:textColor="#000"-->
+<!--        android:textSize="16sp"-->
+<!--        android:layout_below="@+id/textView3"-->
+<!--        />-->
+
+
+
+</RelativeLayout>
