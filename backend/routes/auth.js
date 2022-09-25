@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt");
 //login signup
 
 
-// Register as furbaby
+// Register as furbaby or furmommy
 router.post("/register", async (req, res) => {
     if (!req.body.email) {
         return res.json({
@@ -35,6 +35,7 @@ router.post("/register", async (req, res) => {
         }
         const UNID = uuid.v4();
         const password = await bcrypt.hash(req.body.password, 10);
+        //For furBabies
         await Users.create({
             userUNID: UNID,
             name: req.body.name,
@@ -44,7 +45,12 @@ router.post("/register", async (req, res) => {
             password: password,
             actorType: actorType,
         })
-        //Fyrmommy.Create for furmommies 
+
+        //For furmommies
+        await FurMommies.create ({
+            NID: req.body.NID
+        })
+
         res.json({
             data: "Registration Successfull",
             error: "",
