@@ -4,6 +4,7 @@ const { Op } = require("sequelize");
 const { Users } = require("../models");
 const uuid = require("uuid");
 const bcrypt = require("bcrypt");
+const { FurMommies } = require("../models");
 //login signup
 
 
@@ -48,6 +49,7 @@ router.post("/register", async (req, res) => {
 
         //For furmommies
         await FurMommies.create ({
+            userUNID: UNID,
             NID: req.body.NID
         })
 

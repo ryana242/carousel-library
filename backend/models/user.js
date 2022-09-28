@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       
       //One to Many association with User verification model
       //(A user can have multiple user verification)
-      Users.hasOne(models.FurMommy, {
+      Users.hasOne(models.FurMommies, {
         foreignKey: {
           name: "userUNID",
         },

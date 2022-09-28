@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const FurMommies = sequelize.define("FurMommy", {
+    const FurMommies = sequelize.define("FurMommies", {
 
     NID: DataTypes.STRING,
     });
