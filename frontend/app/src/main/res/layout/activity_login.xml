@@ -28,7 +28,7 @@
         />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/loginEmail"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
        />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/loginPassword"
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
         android:inputType="textPassword"
         android:hint="Password"
         android:textColor="#000"
-        android:layout_below="@+id/editTextTextEmailAddress"
+        android:layout_below="@+id/loginEmail"
       />
 
     <Button
@@ -64,7 +64,7 @@
         android:layout_marginHorizontal="40dp"
         android:text="LOGIN"
         android:backgroundTint="#77C3EC"
-        android:layout_below="@+id/editTextTextPassword"
+        android:layout_below="@+id/loginPassword"
         />
 
     <TextView

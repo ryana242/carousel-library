@@ -48,7 +48,7 @@ router.post("/register", async (req, res) => {
         })
 
         //For furmommies
-        await FurMommies.create ({
+        await FurMommies.create({
             userUNID: UNID,
             NID: req.body.NID
         })
@@ -56,6 +56,38 @@ router.post("/register", async (req, res) => {
         res.json({
             data: "Registration Successfull",
             error: "",
+        });
+    }
+})
+
+router.post("/login", async (req, res) => {
+    if (!req.body.email || !req.body.password) {
+        return res.json({
+            data: "",
+            error: "Field cant be empty"
+        })
+    }
+    //console.log(req.body.email);
+    const op = await Users.findOne({
+        where: {
+            email: req.body.email,
+        }
+    })
+    if (op) {
+        if (await bcrypt.compare(req.body.password, op.password)) {
+            return res.json({
+                data: op,
+                error: ""
+            });
+        }
+        return res.json({
+            data: "",
+            error: "Incorrect password"
+        });
+    } else {
+        return res.json({
+            data: "",
+            error: "Email not registered"
         });
     }
 })
