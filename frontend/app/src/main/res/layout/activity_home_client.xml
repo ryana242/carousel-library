@@ -10,10 +10,14 @@
         android:id="@+id/logoutBtn"
         android:layout_width="100dp"
         android:layout_height="50dp"
-
+        android:layout_below="@+id/carousel"
         android:layout_centerHorizontal="true"
         android:text="Log Out"
     />
 
+    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        android:id="@+id/carousel"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
 
 </RelativeLayout>
