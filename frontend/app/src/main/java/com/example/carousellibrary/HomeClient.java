@@ -33,6 +33,48 @@ public class HomeClient extends AppCompatActivity {
             startActivity(myIntent);
         }
 
+        ImageCarousel carousel = findViewById(R.id.carousel);
+
+        // Register lifecycle. For activity this will be lifecycle/getLifecycle() and for fragments
+        // it will be viewLifecycleOwner/getViewLifecycleOwner().
+        carousel.registerLifecycle(getLifecycle());
+
+        List<CarouselItem> list = new ArrayList<>();
+
+        list.add(
+                new CarouselItem(
+                        R.drawable.carousel_1
+                )
+        );
+
+        list.add(
+                new CarouselItem(
+                        R.drawable.carousel_2
+                )
+        );
+
+        list.add(
+                new CarouselItem(
+                        R.drawable.carousel_3
+                )
+        );
+
+        list.add(
+                new CarouselItem(
+                        R.drawable.carousel_5
+                )
+        );
+
+        list.add(
+                new CarouselItem(
+                        R.drawable.carousel_6
+                )
+        );
+
+        carousel.setAutoPlay(true);
+        carousel.setAutoPlayDelay(3000);
+
+        carousel.setData(list);
 
         logoutBtn = (Button) findViewById(R.id.logoutBtn);
         logoutBtn.setOnClickListener(new View.OnClickListener() {
