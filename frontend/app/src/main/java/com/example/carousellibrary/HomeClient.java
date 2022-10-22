@@ -28,10 +28,10 @@ public class HomeClient extends AppCompatActivity {
         setContentView(R.layout.activity_home_client);
 
         SharedPreferences settings = getApplicationContext().getSharedPreferences("localStorage", 0);
-        if (!settings.contains("userUNID")){
-            Intent myIntent = new Intent(HomeClient.this, LoginActivity.class);
-            startActivity(myIntent);
-        }
+//        if (!settings.contains("userUNID")){
+//            Intent myIntent = new Intent(HomeClient.this, LoginActivity.class);
+//            startActivity(myIntent);
+//        }
 
         ImageCarousel carousel = findViewById(R.id.carousel);
 
@@ -76,21 +76,21 @@ public class HomeClient extends AppCompatActivity {
 
         carousel.setData(list);
 
-        logoutBtn = (Button) findViewById(R.id.logoutBtn);
-        logoutBtn.setOnClickListener(new View.OnClickListener() {
+//        logoutBtn = (Button) findViewById(R.id.logoutBtn);
+//        logoutBtn.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                SharedPreferences settings = getApplicationContext().getSharedPreferences("localStorage", 0);
-                SharedPreferences.Editor editor = settings.edit();
-                System.out.println(settings.contains("userUNID"));
-                editor.remove("userUNID");
-                editor.apply();
-                Intent myIntent = new Intent(HomeClient.this, LoginActivity.class);
-                startActivity(myIntent);
-                finish();
-            }
-        });
+//            @Override
+//            public void onClick(View view) {
+//                SharedPreferences settings = getApplicationContext().getSharedPreferences("localStorage", 0);
+//                SharedPreferences.Editor editor = settings.edit();
+//                System.out.println(settings.contains("userUNID"));
+//                editor.remove("userUNID");
+//                editor.apply();
+//                Intent myIntent = new Intent(HomeClient.this, LoginActivity.class);
+//                startActivity(myIntent);
+//                finish();
+//            }
+//        });
 //
 //        inboxBtn = findViewById(R.id.button);
 //        inboxBtn.setOnClickListener(new View.OnClickListener() {
